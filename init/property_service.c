@@ -601,12 +601,10 @@ int properties_inited(void)
 }
 
 static void load_override_properties() {
-#ifdef ALLOW_LOCAL_PROP_OVERRIDE
     const char *debuggable = property_get("ro.debuggable");
     if (debuggable && (strcmp(debuggable, "1") == 0)) {
         load_properties_from_file(PROP_PATH_LOCAL_OVERRIDE);
     }
-#endif /* ALLOW_LOCAL_PROP_OVERRIDE */
 }
 
 
