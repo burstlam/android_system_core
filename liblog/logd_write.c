@@ -33,6 +33,12 @@
 #endif
 #endif
 
+#ifdef MOTOROLA_LOG
+#if HAVE_LIBC_SYSTEM_PROPERTIES
+#include <sys/system_properties.h>
+#endif
+#endif
+
 #include <cutils/logger.h>
 #include <cutils/logd.h>
 #include <cutils/log.h>
